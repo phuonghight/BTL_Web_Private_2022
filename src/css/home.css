@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "Basis Grotesque Pro";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/FontsFree-Net-BasisGrotesquePro-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Basis Grotesque Pro";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../font/FontsFree-Net-BasisGrotesquePro-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Basis Grotesque Pro";
+  font-style: normal;
+  font-weight: lighter;
+  src: url("../font/FontsFree-Net-BasisGrotesquePro-Light.ttf");
+}
+
+@font-face {
+  font-family: "Recoleta";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/Recoleta-RegularDEMO.otf");
+}
+
+.normal {
+  font-family: "Basis Grotesque Pro";
+  font-weight: normal;
+  font-size: 100px;
+  line-height: 100px;
+}
+
+.light {
+  font-family: "Basis Grotesque Pro";
+  font-weight: lighter;
+  font-size: 100px;
+  line-height: 100px;
+}
+
+.bold {
+  font-family: "Basis Grotesque Pro";
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 100px;
+}
+
+.recoleta {
+  font-family: "Recoleta";
+  font-size: 225px;
+  line-height: 225px;
+}
