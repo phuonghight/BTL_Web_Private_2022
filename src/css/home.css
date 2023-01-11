@@ -68,8 +68,19 @@ body {
 
 .flex-center {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.flex {
+  display: flex;
+  align-items: flex-start;
 }
 
 .flex-cl-center {
@@ -172,8 +183,19 @@ body {
   padding: 50px;
 }
 
+@keyframes apperence {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .banner_content {
   width: 55%;
+  animation: apperence 0.8s;
 }
 
 .banner_heading {
@@ -237,6 +259,7 @@ body {
 }
 
 .banner_video {
+  animation: apperence 0.8s;
   width: 40%;
 }
 
@@ -265,6 +288,8 @@ body {
   background: white;
   position: relative;
   cursor: none;
+  overflow: hidden;
+  z-index: 99;
 }
 
 .video {
@@ -429,14 +454,13 @@ body {
   background-color: white;
 }
 
-.whatwedo {
-  height: 100vh;
-  background: url("../images/noise-texture-200.png");
-  overflow: hidden;
-}
-
 .expertise_list {
   padding: 80px 0;
+}
+
+.expertise_list li {
+  width: 25%;
+  padding: 0 20px;
 }
 
 .expertise_item_svg {
@@ -469,6 +493,19 @@ body {
   font-size: 24px;
   line-height: 30px;
   color: var(--text-color);
+  margin: 20px 0;
+}
+
+.whatwedo {
+  height: 100vh;
+  background: url("../images/noise-texture-200.png");
+  overflow: hidden;
+}
+
+.spacer {
+  height: 100vh;
+  background: url("../images/noise-texture-200.png");
+  overflow: hidden;
 }
 
 .overlay-collum {
@@ -503,6 +540,28 @@ body {
   height: 100vh;
 }
 
+.brand_headding {
+  font-family: "Recoleta";
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 70px;
+  color: var(--text-color);
+}
+
 .brand_content {
   display: flex;
+}
+
+.brand_logo_img {
+  margin: 0 20px;
+  padding: 30px;
+  background-color: white;
+  border: 1px solid var(--text-color);
+  border-radius: 15px;
+  box-shadow: 2px 2px 0 var(--text-color);
+}
+
+.brand_logo img {
+  width: 160px;
+  height: 70px;
 }

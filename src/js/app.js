@@ -1,5 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
- 
+
 const showAnim = gsap
   .from(".header", {
     yPercent: -100,
@@ -7,7 +7,7 @@ const showAnim = gsap
     duration: 0.4,
   })
   .progress(1);
- 
+
 ScrollTrigger.create({
   trigger: ".banner",
   start: "top top",
@@ -17,7 +17,7 @@ ScrollTrigger.create({
     self.direction === -1 ? showAnim.play() : showAnim.reverse();
   },
 });
- 
+
 gsap
   .timeline({
     scrollTrigger: {
@@ -30,7 +30,7 @@ gsap
   })
   .to(".banner .banner_content", { y: "30%", opacity: 0.5, scale: 0.9 })
   .to(".banner .banner_video", { y: "30%", opacity: 0.5, scale: 0.9 }, "<");
- 
+
 [".device4", ".device3", ".device2", ".device1"].forEach((item, index) => {
   gsap.from(item, {
     y: `${20 * (index + 1)}%`,
@@ -43,7 +43,7 @@ gsap
     },
   });
 });
- 
+
 gsap
   .timeline({
     scrollTrigger: {
@@ -79,7 +79,7 @@ gsap
     transformOrigin: "top left",
     rotate: 3,
   })
-  .from(".work_link", {
+  .from(".work_btn", {
     y: "50%",
     opacity: 0,
     transformOrigin: "top left",
@@ -88,7 +88,7 @@ gsap
 // .from(".work_link", {
 //   y: "0",
 // });
- 
+
 gsap
   .timeline({
     scrollTrigger: {
@@ -101,7 +101,63 @@ gsap
     },
   })
   .to(".panel", { x: "-400%" });
- 
+
+  gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".expertise",
+      start: "top top",
+      end: "150% bottom",
+      scrub: true,
+      // markers: true,
+      pin: true,
+    },
+  })
+
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".expertise",
+      start: "top 65%",
+      end: "100% bottom",
+      scrub: true,
+      // markers: true,
+      // pin: true,
+    },
+  })
+  .from(".section_heading", {
+    y: "50%",
+    opacity: 0,
+    transformOrigin: "top left",
+    rotate: 5,
+  })
+  .from(
+    ".section_title",
+    {
+      y: "50%",
+      opacity: 0,
+      transformOrigin: "top left",
+      rotate: 5,
+    },
+    "<"
+  )
+  .from(
+    ".expertise_list",
+    {
+      y: "20%",
+      opacity: 0,
+      transformOrigin: "top left",
+      rotate: 5,
+    },
+    "<"
+  )
+  .from(".expertise_btn", {
+    y: "20%",
+    opacity: 0,
+    transformOrigin: "top left",
+    rotate: 5,
+  });
+
 gsap.to(".overlay-collum", {
   x: "-100%",
   scrollTrigger: {
@@ -112,12 +168,12 @@ gsap.to(".overlay-collum", {
     // markers: true,
   },
 });
- 
+
 gsap
   .timeline({
     scrollTrigger: {
       trigger: ".whatwedo",
-      start: "top top",
+      start: "1px top",
       end: "bottom top",
       scrub: true,
       // markers: true,
@@ -130,7 +186,7 @@ gsap
   .to(".overlay-collum4", { y: "-30vh" })
   .to(".overlay-collum5", { y: "-30vh" })
   .to(".overlay-collum6", { y: "-30vh" });
- 
+
 gsap.from(".brand", {
   x: "100%",
   scrollTrigger: {
@@ -141,43 +197,66 @@ gsap.from(".brand", {
     // markers: true,
   },
 });
- 
-gsap.to(".overlay-collum", {
-  x: "-100%",
-  scrollTrigger: {
-    trigger: ".whatwedo",
-    start: "200% bottom",
-    end: "200% bottom",
-    scrub: true,
-    // markers: true,
-  },
-});
- 
+
+// gsap.to(".overlay-collum", {
+//   x: "-100%",
+//   scrollTrigger: {
+//     trigger: ".whatwedo",
+//     start: "200% bottom",
+//     end: "200% bottom",
+//     scrub: true,
+//     // markers: true,
+//   },
+// });
+
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".brand",
+      start: "1px top",
+      end: "1px top",
+      scrub: true,
+      // markers: true,
+    },
+  })
+
 gsap
   .timeline({
     scrollTrigger: {
       trigger: ".brand",
       start: "top top",
-      end: "250% top",
+      end: "200% top",
       pin: true,
       scrub: true,
       // markers: true,
     },
   })
-  .from(".brand_headding", {
+  .from(".brand_headding1", {
     y: "50%",
     opacity: 0,
     transformOrigin: "top left",
-    rotate: 5,
+    rotate: 3,
+  })
+  .from(".brand_headding2", {
+    y: "50%",
+    opacity: 0,
+    transformOrigin: "top left",
+    rotate: 3,
+  })
+  .from(".brand_headding3", {
+    y: "50%",
+    opacity: 0,
+    transformOrigin: "top left",
+    rotate: 3,
   })
   .from(".brand_img", { y: "30%", opacity: 0 })
-  .from(".brand_list-1", { x: "5%", opacity: 0 }, "<")
-  .from(".brand_list-2", { x: "-5%", opacity: 0 }, "<");
- 
+  .from(".brand_list-1", { x: "10%", opacity: 0 }, "<")
+  .from(".brand_list-2", { x: "-10%", opacity: 0 }, "<");
+
 let proxy = { skew: 0 },
   skewSetter = gsap.quickSetter(".skewElem", "skewY", "deg"), // fast
   clamp = gsap.utils.clamp(-1, 1); // don't let the skew go beyond 20 degrees.
- 
+
 ScrollTrigger.create({
   onUpdate: (self) => {
     let skew = clamp(self.getVelocity() / -300);
@@ -194,13 +273,13 @@ ScrollTrigger.create({
     }
   },
 });
- 
+
 // make the right edge "stick" to the scroll bar. force3D: true improves performance
 gsap.set(".skewElem", {
   transformOrigin: "right top, left bottom",
   force3D: true,
 });
- 
+
 $(".main_video")
   .mousemove(function (e) {
     var x = e.pageX - this.offsetLeft;
@@ -216,9 +295,9 @@ $(".main_video")
     $(".mouse").css("left", `${x}px`);
     if (y <= 0) return;
   });
- 
+
 let videoIsTrue = false;
- 
+
 function updateMouse() {
   let html;
   if (videoIsTrue) {
@@ -228,16 +307,16 @@ function updateMouse() {
     html = `<div class="shape flex-cl-center"><i class="fa-solid fa-square"></i></div>
     <div class="title">CLOSE VIDEO</div>`;
   }
- 
+
   $(".mouse").html(html);
 }
- 
+
 function updateVideo() {
   const vid = document.createElement("video");
   vid.classList.add("video");
   vid.autoplay = true;
   vid.loop = true;
- 
+
   if (videoIsTrue) {
     vid.muted = true;
     vid.src = "./src/videos/show-video.mp4";
@@ -246,13 +325,13 @@ function updateVideo() {
     vid.src =
       "https://www.viivue.com/wp-content/uploads/2022/05/ViiVue-ShowReel.mp4";
   }
- 
+
   updateMouse();
- 
+
   videoIsTrue = !videoIsTrue;
   $(".main_video").children()[0].replaceWith(vid);
 }
- 
+
 $(".main_video").click((e) => {
   updateVideo();
 });
