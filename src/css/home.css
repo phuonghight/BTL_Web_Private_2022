@@ -26,29 +26,483 @@
   src: url("../font/Recoleta-RegularDEMO.otf");
 }
 
-.normal {
-  font-family: "Basis Grotesque Pro";
-  font-weight: normal;
-  font-size: 100px;
-  line-height: 100px;
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
 }
 
-.light {
-  font-family: "Basis Grotesque Pro";
-  font-weight: lighter;
-  font-size: 100px;
-  line-height: 100px;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
-.bold {
-  font-family: "Basis Grotesque Pro";
+:root {
+  --primary-color: #f4d00a;
+  --btn-hover: #f1c400;
+  --text-color: #141414;
+  --text-color-hover: #de313e;
+}
+
+video,
+img {
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-cl-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn {
+  font-family: "Basis Grotesque Pro", sans-serif;
   font-weight: bold;
-  font-size: 100px;
-  line-height: 100px;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--text-color);
+  background-color: white;
+  padding: 8px 25px;
+  border: 2px solid var(--text-color);
+  border-radius: 5px;
+  box-shadow: 5px 5px 0 var(--text-color);
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.recoleta {
+.btn:hover {
+  background-color: var(--btn-hover);
+  box-shadow: 7px 7px 0 var(--text-color);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.nav-desktop {
+  /* background: rgb(255 255 255 / 20%);
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px); */
+  background: url("../images/noise-texture-200.png");
+  background-color: var(--primary-color);
+  padding: 20px 0;
+}
+
+.header_wraper {
+  padding: 0px 40px;
+}
+
+.logo img {
+  width: 100px;
+}
+
+.menu_list li {
+  margin: 0 30px;
+}
+
+.menu_item_link {
+  font-family: "Basis Grotesque Pro", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  position: relative;
+}
+
+.menu_item_link::before {
+  content: "";
+  width: 100%;
+  height: 1.5px;
+  background-color: var(--text-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.menu_item:hover .menu_item_link::before {
+  opacity: 1;
+}
+
+/* .cur-page .menu_item_link::before {
+  opacity: 1;
+} */
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.banner {
+  background: url("../images/noise-texture-200.png");
+  background-color: var(--primary-color);
+  position: relative;
+  padding: 50px;
+}
+
+.banner_content {
+  width: 55%;
+}
+
+.banner_heading {
+  font-family: "Basis Grotesque Pro", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 30px;
+  color: #141414;
+  letter-spacing: 3px;
+  margin: 10px 0;
+}
+
+.banner_des {
   font-family: "Recoleta";
-  font-size: 225px;
-  line-height: 225px;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 60px;
+  color: #141414;
+  line-height: 1.2;
+}
+
+.banner_des_gif {
+  position: relative;
+}
+
+.banner_des_gif::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.banner_des_gif_arrow::before {
+  background-image: url("../images/hero-arrow.gif");
+}
+
+.banner_des_gif_lines::before {
+  background-image: url("../images/lines.gif");
+  width: 50px !important;
+  height: 50px !important;
+  right: 0;
+  top: -10px;
+}
+
+.banner_des_gif_twinkle::before {
+  background-image: url("../images/hero-star.gif");
+  width: 20px !important;
+  height: 20px !important;
+  right: 0;
+}
+
+.banner_des_gif_heart::before {
+  background-image: url("../images/hero-heart.gif");
+  left: 100%;
+  top: 0;
+  transform: translateY(-25%);
+  width: 100px !important;
+  height: 100px !important;
+}
+
+.banner_video {
+  width: 40%;
+}
+
+.banner_video video {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.banner_video {
+  position: relative;
+}
+
+.banner_video::after {
+  content: "";
+  background: url("../images/noise-texture-200.png");
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.main_video {
+  height: 100vh;
+  background: white;
+  position: relative;
+  cursor: none;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mouse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+.mouse .shape {
+  background-color: var(--text-color-hover);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.mouse .title {
+  font-family: "Basis Grotesque Pro", sans-serif;
+  font-weight: bold;
+  color: var(--text-color-hover);
+  margin: 10px 0;
+}
+
+.main {
+  width: 500vw;
+  height: 100vh;
+  display: flex;
+  background: url("../images/noise-texture-200.png");
+}
+
+.slide1 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.imgs_wraper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  height: 90%;
+}
+
+.imgs_wraper img {
+  /* width: 100%; */
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.slide1_content {
+  flex: 1;
+}
+
+.slide1_content_heading {
+  font-family: "Basis Grotesque Pro", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 30px;
+  color: var(--text-color-hover);
+  letter-spacing: 2px;
+}
+
+.slide1_content_des {
+  font-family: "Recoleta";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 45px;
+  color: var(--text-color);
+  margin: 20px 0;
+}
+
+.slide {
+  width: 400vw;
+  display: flex;
+}
+
+.panel {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.slide_card {
+  border-radius: 20px;
+  width: 90vw;
+  height: 80vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-size: 100%;
+  object-fit: cover;
+  justify-content: space-around;
+  margin: 0 50px;
+  overflow: hidden;
+}
+
+.slide2 .slide_card {
+  background: url("../images/work-background1.webp") no-repeat;
+}
+
+.slide3 .slide_card {
+  background: url("../images/work-background2.webp") no-repeat;
+}
+
+.slide4 .slide_card {
+  background: url("../images/work-background3.webp") no-repeat;
+}
+
+.slide5 .slide_card {
+  background: url("../images/work-background4.webp") no-repeat;
+}
+
+.card_content {
+  width: 25%;
+}
+
+.card_heading {
+  font-family: "Recoleta";
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 70px;
+  color: white;
+}
+
+.card_des {
+  font-family: "Basis Grotesque Pro", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: white;
+
+  padding: 20px 0;
+}
+
+.card_link {
+  font-family: "Basis Grotesque Pro", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--text-color);
+
+  padding: 10px 25px;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.card_link:hover {
+  background-color: white;
+}
+
+.whatwedo {
+  height: 100vh;
+  background: url("../images/noise-texture-200.png");
+  overflow: hidden;
+}
+
+.expertise_list {
+  padding: 80px 0;
+}
+
+.expertise_item_svg {
+  width: 200px;
+  height: 200px;
+  background: url("../images/option-background.svg") no-repeat;
+  background-size: 100%;
+  object-fit: cover;
+}
+
+.section_heading {
+  font-family: "Recoleta";
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 70px;
+  color: var(--text-color);
+}
+
+.section_title {
+  font-family: "Basis Grotesque Pro", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-color);
+}
+
+.expertise_item_heading {
+  font-family: "Recoleta";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--text-color);
+}
+
+.overlay-collum {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 100%;
+}
+
+.overlay-collum div {
+  height: 160vh;
+  width: calc(100% / 6);
+  background-color: #edc100;
+}
+
+.overlay-collum div:nth-child(even) {
+  border-bottom-left-radius: 1000px;
+  border-bottom-right-radius: 1000px;
+  transform: translateY(-100%);
+}
+
+.overlay-collum div:nth-child(odd) {
+  border-top-left-radius: 1000px;
+  border-top-right-radius: 1000px;
+  transform: translateY(100%);
+}
+
+.brand {
+  background-color: #edc100;
+  height: 100vh;
+}
+
+.brand_content {
+  display: flex;
 }
