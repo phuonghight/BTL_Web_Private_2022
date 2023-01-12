@@ -102,17 +102,16 @@ gsap
   })
   .to(".panel", { x: "-400%" });
 
-  gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".expertise",
-      start: "top top",
-      end: "150% bottom",
-      scrub: true,
-      // markers: true,
-      pin: true,
-    },
-  })
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".expertise",
+    start: "top top",
+    end: "150% bottom",
+    scrub: true,
+    // markers: true,
+    pin: true,
+  },
+});
 
 gsap
   .timeline({
@@ -162,8 +161,8 @@ gsap.to(".overlay-collum", {
   x: "-100%",
   scrollTrigger: {
     trigger: ".whatwedo",
-    start: "top top",
-    end: "top top",
+    start: "1px top",
+    end: "1px top",
     scrub: true,
     // markers: true,
   },
@@ -177,7 +176,7 @@ gsap
       end: "bottom top",
       scrub: true,
       // markers: true,
-      // pin: true,
+      // pin: ".overlay-collum",
     },
   })
   .to(".overlay-collum1", { y: "-30vh" })
@@ -188,37 +187,36 @@ gsap
   .to(".overlay-collum6", { y: "-30vh" });
 
 gsap.from(".brand", {
-  x: "100%",
+  backgroundColor: "white",
   scrollTrigger: {
-    trigger: ".whatwedo",
-    start: "bottom top",
-    end: "200% bottom",
+    trigger: ".brand",
+    start: "top top",
+    end: "top top",
     scrub: true,
     // markers: true,
   },
 });
 
-// gsap.to(".overlay-collum", {
-//   x: "-100%",
-//   scrollTrigger: {
-//     trigger: ".whatwedo",
-//     start: "200% bottom",
-//     end: "200% bottom",
-//     scrub: true,
-//     // markers: true,
-//   },
-// });
+gsap.to(".overlay-collum", {
+  display: "none",
+  scrollTrigger: {
+    trigger: ".brand",
+    start: "top top",
+    end: "top top",
+    scrub: true,
+    // markers: true,
+  },
+});
 
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".brand",
-      start: "1px top",
-      end: "1px top",
-      scrub: true,
-      // markers: true,
-    },
-  })
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".brand",
+    start: "1px top",
+    end: "1px top",
+    scrub: true,
+    // markers: true,
+  },
+});
 
 gsap
   .timeline({
@@ -250,8 +248,8 @@ gsap
     rotate: 3,
   })
   .from(".brand_img", { y: "30%", opacity: 0 })
-  .from(".brand_list-1", { x: "10%", opacity: 0 }, "<")
-  .from(".brand_list-2", { x: "-10%", opacity: 0 }, "<");
+  .from(".brand_list-1", { x: "5%", opacity: 0 }, "<")
+  .from(".brand_list-2", { x: "-5%", opacity: 0 }, "<");
 
 let proxy = { skew: 0 },
   skewSetter = gsap.quickSetter(".skewElem", "skewY", "deg"), // fast
