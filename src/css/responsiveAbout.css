@@ -1,0 +1,147 @@
+@media screen and (min-width: 1025px) {
+  .header_mobile,
+  .nav_mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 970px;
+    height: 100%;
+    margin: 0 20px;
+  }
+
+  .btn {
+    max-width: 125px;
+  }
+
+  .flex-reverse {
+    flex-direction: column-reverse;
+  }
+
+  .hiden_mobile {
+    display: none;
+  }
+  .width100 {
+    width: 100%;
+  }
+
+  .flex_mobile_wrap {
+    flex-wrap: wrap;
+  }
+
+  /* Header mobile */
+
+  .header_mobile {
+    background: rgb(255 255 255 / 20%);
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+    padding: 10px 0;
+    border-bottom: 1px solid #141414;
+  }
+
+  .menu_mobile_btn {
+    height: 35px;
+    width: 35px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .menu_mobile_btn_burger {
+    width: 100%;
+    height: 3px;
+    background-color: #141414;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu_mobile_btn_burger_after {
+    content: "";
+    height: 3px;
+    width: 75%;
+    background-color: #141414;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* animate */
+  .menu_mobile_btn.open .menu_mobile_btn_burger {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  .menu_mobile_btn.open .menu_mobile_btn_burger_after {
+    width: 100%;
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  .btn_mobile {
+    padding: 5px 10px;
+  }
+
+  .nav_mobile {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+    background-color: #f4d00a;
+    right: 100%;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .nav_mobile.show {
+    transform: translate(100%, 0);
+  }
+
+  .menu_mobile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .menu_item {
+    padding: 20px 0;
+  }
+
+  .menu_item_link {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .navbar_social_network {
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .navbar_social_network li {
+    margin: 0 15px;
+  }
+
+  .navbar_social_network li a {
+    color: #141414;
+  }
+
+  /* Lets chat */
+  .lets_chat_link {
+    font-size: 35px;
+    line-height: 38px;
+  }
+
+  .lets_chat_des {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    padding: 30px 0;
+  }
+
+  /* Footer */
+  .footer_info {
+    margin-left: 20px;
+    margin-top: 30px;
+  }
+}

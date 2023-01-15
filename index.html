@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     <title>Web Design Company in Vietnam - Ho Chi Minh City | Viivue</title>
 
     <link rel="icon" href="./src/images/viivue-icon.svg">
@@ -16,11 +16,12 @@
 
     <!-- custom css -->
     <link rel="stylesheet" href="./src/css/home.css">
+    <link rel="stylesheet" href="./src/css/responsiveHomePage.css">
 </head>
 
 <body>
     <!-- header desktop -->
-    <div class="header nav-desktop">
+    <div class="header nav-desktop hiden_mobile">
         <div class="header_wraper flex-between">
             <a href="./index.html" class="logo">
                 <img src="./src/images/viivue-logo.svg" alt="">
@@ -48,11 +49,69 @@
         </div>
     </div>
 
+    <!-- Header tablet and mobile -->
+    <div class="header header_mobile">
+        <div class="container flex-between">
+            <a href="./index.html" class="logo">
+                <img src="./src/images/viivue-logo.svg" alt="">
+            </a>
+
+            <div class="flex-between">
+                <a href="./src/html/website-quotation.html" class="quotation_link btn btn_mobile text-center">
+                    Get A Free Consulation
+                </a>
+                <div class="menu_mobile_btn">
+                    <div class="menu_mobile_btn_burger"></div>
+                    <div class="menu_mobile_btn_burger_after"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar mobile -->
+    <div class="nav_mobile">
+        <ul class="menu_mobile flex-cl-center">
+            <li class="menu_item cur-page">
+                <a href="./index.html" class="menu_item_link">Home</a>
+            </li>
+            <li class="menu_item">
+                <a href="./src/html/work.html" class="menu_item_link">Work</a>
+            </li>
+            <li class="menu_item">
+                <a href="./src/html/expertise.html" class="menu_item_link">Expertise</a>
+            </li>
+            <li class="menu_item">
+                <a href="./src/html/about.html" class="menu_item_link">About</a>
+            </li>
+            <li class="menu_item">
+                <a href="./src/html/contact.html" class="menu_item_link">Contact</a>
+            </li>
+        </ul>
+
+        <ul class="navbar_social_network">
+            <li class="social_network_item">
+                <a href="#" class="flex-cl-center">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+            </li>
+            <li class="social_network_item">
+                <a href="#" class="flex-cl-center">
+                    <i class="fa-brands fa-dribbble"></i>
+                </a>
+            </li>
+            <li class="social_network_item">
+                <a href="#" class="flex-cl-center">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
     <!-- banner -->
     <div class="banner">
         <div class="container">
-            <div class="flex-center">
-                <div class="banner_content">
+            <div class="flex-center flex_mobile_wrap flex-reverse">
+                <div class="banner_content width100">
                     <div class="banner_heading">A WEB DEVELOPMENT AND WEB DESIGN COMPANY</div>
                     <span class="banner_des">
                         Specialized in creating
@@ -73,7 +132,7 @@
                         </span>
                     </span>
                 </div>
-                <div class="banner_video">
+                <div class="banner_video width100">
                     <video src="./src/videos/hero-video.mp4" autoplay loop muted></video>
                 </div>
             </div>
@@ -87,7 +146,7 @@
         </video> -->
         <video src="./src/videos/show-video.mp4" class="video" autoplay loop muted></video>
 
-        <div class="mouse flex-cl-center">
+        <div class="mouse flex-cl-center hiden_mobile">
             <div class="shape flex-cl-center"><i class="fa-solid fa-eye"></i></div>
             <div class="title">PLAY VIDEO</div>
         </div>
@@ -95,22 +154,24 @@
 
     <!-- main -->
     <div class="main">
-        <div class="slide1 panel">
-            <div class="imgs_wraper">
-                <img class="device1" src="./src/images/device-4.png.webp" alt="">
-                <img class="device2" src="./src/images/device-3.png.webp" alt="">
-                <img class="device3" src="./src/images/device-2.png.webp" alt="">
-                <img class="device4" src="./src/images/device-1.png.webp" alt="">
-            </div>
-            <div class="slide1_content">
-                <div class="slide1_content_heading">SELECTED WORK</div>
-                <div class="slide1_content_des">
-                    <p class="slide1_content_des1">Creative and optimized</p>
-                    <p class="slide1_content_des2">website designs that</p>
-                    <p class="slide1_content_des3">grow businesses</p>
+        <div class="container">
+            <div class="slide1 panel">
+                <div class="imgs_wraper">
+                    <img class="device1" src="./src/images/device-4.png.webp" alt="">
+                    <img class="device2" src="./src/images/device-3.png.webp" alt="">
+                    <img class="device3" src="./src/images/device-2.png.webp" alt="">
+                    <img class="device4" src="./src/images/device-1.png.webp" alt="">
                 </div>
-                <div class="work_btn">
-                    <a href="./src/html/work.html" class="btn">View All</a>
+                <div class="slide1_content">
+                    <div class="slide1_content_heading">SELECTED WORK</div>
+                    <div class="slide1_content_des">
+                        <p class="slide1_content_des1">Creative and optimized</p>
+                        <p class="slide1_content_des2">website designs that</p>
+                        <p class="slide1_content_des3">grow businesses</p>
+                    </div>
+                    <div class="work_btn">
+                        <a href="./src/html/work.html" class="btn">View All</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -176,14 +237,17 @@
         </div>
     </div>
 
-    <div style="height: 500vh;"></div>
+    <div class="hiden_mobile" style="height: 500vh;"></div>
 
     <!-- Expertise -->
     <div class="whatwedo expertise flex-cl-center">
         <div class="container">
             <div class="flex-cl-center">
                 <div class="section_heading">What We Do</div>
-                <div class="section_title">We might not offer a lot of services, but we excel at what we do</div>
+                <div class="section_title text-center">
+                    We might not offer a lot of services, but we excel at what we do
+                </div>
+
                 <ul class="expertise_list flex">
                     <li class="expertise_item flex-cl-center">
                         <div class="expertise_item_svg flex-cl-center">
@@ -233,8 +297,6 @@
         </div>
     </div>
 
-    <!-- <div class="spacer"></div> -->
-
     <div class="overlay-collum">
         <div class="overlay-collum1"></div>
         <div class="overlay-collum2"></div>
@@ -244,10 +306,11 @@
         <div class="overlay-collum6"></div>
     </div>
 
+    <!-- Brand -->
     <div class="brand">
-        <div class="flex-cl-center" style="height: 100%;">
-            <div class="container" style="flex: 2">
-                <div class="brand_content flex-center">
+        <div class="">
+            <div class="container">
+                <div class="brand_content flex-between flex-reverse">
                     <div class="brand_headding">
                         <p class="brand_headding1">We help brands like yours</p>
                         <p class="brand_headding2">elevate their online</p>
@@ -259,55 +322,56 @@
                 </div>
             </div>
 
-            <div class="brand_list-1" style="flex: 1">
-                <div class="brand_logo flex-center">
-                    <div class="brand_logo_img">
-                        <img src="./src/images/brand-bbt.png.webp" alt="">
-                    </div>
-                    <div class="brand_logo_img">
-                        <img src="./src/images/brand-rmit.webp" alt="">
-                    </div>
-                    <div class="brand_logo_img">
-                        <img src="./src/images/brand-mia.webp" alt="">
-                    </div>
-                    <div class="brand_logo_img">
-                        <img src="./src/images/brand-huynchi.webp" alt="">
-                    </div>
-                    <div class="brand_logo_img">
-                        <img src="./src/images/brand-fossil.webp" alt="">
-                    </div>
-                    <div class="brand_logo_img">
-                        <img src="./src/images/brand-catherine-denoual.webp" alt="">
-                    </div>
-                    <div class="brand_logo_img">
-                        <img src="./src/images/brand-wilmar.webp" alt="">
+            <div class="brand_list">
+                <div class="brand_list-1">
+                    <div class="brand_logo">
+                        <div class="brand_logo_img flex-cl-center">
+                            <img src="./src/images/brand-bbt.png.webp" alt="">
+                        </div>
+                        <div class="brand_logo_img flex-cl-center">
+                            <img src="./src/images/brand-rmit.webp" alt="">
+                        </div>
+                        <div class="brand_logo_img flex-cl-center">
+                            <img src="./src/images/brand-mia.webp" alt="">
+                        </div>
+                        <div class="brand_logo_img flex-cl-center">
+                            <img src="./src/images/brand-huynchi.webp" alt="">
+                        </div>
+                        <div class="brand_logo_img flex-cl-center">
+                            <img src="./src/images/brand-fossil.webp" alt="">
+                        </div>
+                        <div class="brand_logo_img flex-cl-center">
+                            <img src="./src/images/brand-catherine-denoual.webp" alt="">
+                        </div>
+                        <div class="brand_logo_img flex-cl-center">
+                            <img src="./src/images/brand-wilmar.webp" alt="">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="brand_list-2" style="flex: 1">
-                <div class="brand_logo flex-center">
-                    <div class="brand_logo_img">
-                        <img src="./src/images/brand-vero.webp" alt="">
+                <div class="brand_list-2">
+                    <div class="brand_logo">
+                        <div class="brand_logo_img flex-cl-center">
+                            <img src="./src/images/brand-vero.webp" alt="">
+                        </div>
+                        <div class="brand_logo_img flex-cl-center">
+                            <img src="./src/images/brand-bottle-shop.webp" alt="">
+                        </div>
+                        <div class="brand_logo_img flex-cl-center">
+                            <img src="./src/images/brand-koru-education.webp" alt="">
+                        </div>
+                        <div class="brand_logo_img flex-cl-center">
+                            <img src="./src/images/brand-inspecrorio.webp" alt="">
+                        </div>
+                        <div class="brand_logo_img flex-cl-center">
+                            <img src="./src/images/brand-lawyers.webp" alt="">
+                        </div>
+                        <div class="brand_logo_img flex-cl-center">
+                            <img src="./src/images/brand-hai-nam.webp" alt="">
+                        </div>
+                        <div class="brand_logo_img flex-cl-center">
+                            <img src="./src/images/brand-tapetco.webp" alt="">
+                        </div>
                     </div>
-                    <div class="brand_logo_img">
-                        <img src="./src/images/brand-bottle-shop.webp" alt="">
-                    </div>
-                    <div class="brand_logo_img">
-                        <img src="./src/images/brand-koru-education.webp" alt="">
-                    </div>
-                    <div class="brand_logo_img">
-                        <img src="./src/images/brand-inspecrorio.webp" alt="">
-                    </div>
-                    <div class="brand_logo_img">
-                        <img src="./src/images/brand-lawyers.webp" alt="">
-                    </div>
-                    <div class="brand_logo_img">
-                        <img src="./src/images/brand-hai-nam.webp" alt="">
-                    </div>
-                    <div class="brand_logo_img">
-                        <img src="./src/images/brand-tapetco.webp" alt="">
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -317,7 +381,7 @@
     <div class="Lets_chat">
         <div class="container">
             <div class="flex-between">
-                <div class="rigth flex-center">
+                <div class="rigth flex">
                     <div class="mailbox">
                         <img src="./src/images/Mailbox.svg" alt="">
                     </div>
@@ -353,7 +417,7 @@
                     </div>
                 </div>
                 <div class="right flex">
-                    <ul class="footer_nav">
+                    <ul class="footer_nav hiden_mobile">
                         <li class="footer_nav_item">
                             <div class="square-dot"></div>
                             <a href="./src/html/work.html" class="footer_nav_link footer_link">Work</a>
@@ -428,7 +492,7 @@
 
             <hr>
 
-            <div class="after_hr flex-between">
+            <div class="after_hr flex-between flex-reverse">
                 <span class="footer_text">Copyright © 2023. All rights reserved.</span>
                 <div class="rules flex">
                     <div class="term-of-use">
@@ -442,14 +506,17 @@
         </div>
     </footer>
 
+    <!-- JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
         integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 
-    <script src="./src/js/app.js"></script>
+    <!-- app.js -->
+    <script src="./src/js/home.js"></script>
 
 </body>
 
