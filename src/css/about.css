@@ -51,6 +51,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
+  counter-reset: count;
   overflow-x: hidden;
 }
 
@@ -134,6 +135,14 @@ body {
   text-align: center;
 }
 
+.text-style {
+  font-family: "Basis Grotesque Pro", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-color);
+}
+
 .btn {
   font-family: "Basis Grotesque Pro", sans-serif;
   font-weight: bold;
@@ -213,10 +222,270 @@ body {
 }
 
 /* MAIN */
+/* Banner */
+.header_banner {
+  background: url(../images/noise-texture-200.png), var(--primary-color);
+  padding: 100px 0;
+}
+
+.banner_wraper {
+  /* margin: 0 auto; */
+  width: 50vw;
+}
+
+.banner_status a,
+.banner_status span {
+  text-decoration: underline;
+  padding: 0 15px;
+}
+
+.banner_heading {
+  font-family: "Recoleta";
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 60px;
+  color: var(--text-color);
+  padding: 20px 0;
+}
+
+.banner_img {
+  padding: 50px 0;
+}
+
+.banner_img img {
+  width: 100%;
+  height: 100%;
+}
+
+/* What we stand for */
+
+.stand {
+  /* background: url("../images/noise-texture-200.png"); */
+  position: relative;
+}
+
+.stand::before {
+  content: "";
+  width: 100%;
+  height: 150px;
+  background: url("../images/expertise-rips.png.webp") no-repeat;
+  /* background-size: 100%; */
+  object-fit: cover;
+  position: absolute;
+  bottom: 100%;
+}
+
+.section_heading {
+  font-family: "Recoleta";
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 70px;
+  color: var(--text-color);
+}
+
+.stand_list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px 0;
+}
+
+.stand_item {
+  width: 25%;
+  padding: 0 20px 40px;
+  position: relative;
+}
+
+.stand_item::before {
+  counter-increment: count;
+  content: "0" counter(count);
+  position: absolute;
+  bottom: 0;
+  color: var(--text-color);
+  font-family: "Basis Grotesque Pro", sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  opacity: 0.3;
+}
+
+.section_item_heading {
+  font-family: "Recoleta";
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  color: var(--text-color);
+}
+
+.section_des {
+  padding: 15px 0;
+}
+
+.stand_item:not(:last-child) {
+  border-right: 2px solid #d7d7d7;
+}
+
+.stand_img img {
+  width: 100%;
+}
+
+/* Why ViiVue */
+
+.text-white {
+  color: white;
+}
+
+.feature_item_img {
+  margin: 20px 0;
+}
+
+.description_heading {
+  margin-bottom: 30px;
+}
+
+.description {
+  background-color: #141414;
+  padding: 100px 0 250px 0;
+}
+
+.feature_item {
+  width: 25%;
+  padding: 0 30px;
+}
+
+/* Testimonials */
+
+.testimonials {
+  background: url(../images/noise-texture-200.png);
+}
+
+.testimonials_wraper {
+  background: url("../images/noise-texture-200.png"), var(--primary-color);
+  border-radius: 15px;
+  padding: 50px;
+  display: flex;
+  transform: translate(0, -160px);
+}
+
+.testimonials_des_wraper {
+  max-width: 70%;
+}
+
+.testimonials_user_wraper:not(.cur_user) {
+  display: none;
+}
+
+.testimonials_user {
+  border-left: 2px solid var(--text-color);
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonials_des {
+  font-family: "Recoleta";
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  color: var(--text-color);
+  max-height: 200px;
+  padding-right: 100px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.testimonials_des:not(.cur_testimonials_des) {
+  display: none;
+}
+
+/* .testimonials_des::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  bottom: 0;
+  left: 0;
+  right: 100px;
+  background: -webkit-linear-gradient(
+    bottom,
+    rgb(241, 196, 0) 0%,
+    rgba(241, 196, 0, 0) 100%
+  );
+  background: -o-linear-gradient(
+    bottom,
+    rgb(241, 196, 0) 0%,
+    rgba(241, 196, 0, 0) 100%
+  );
+  background: -ms-linear-gradient(
+    bottom,
+    rgb(241, 196, 0) 0%,
+    rgba(241, 196, 0, 0) 100%
+  );
+  background: -moz-linear-gradient(
+    bottom,
+    rgb(241, 196, 0) 0%,
+    rgba(241, 196, 0, 0) 100%
+  );
+  background: linear-gradient(
+    to top,
+    rgb(241, 196, 0) 0%,
+    rgba(241, 196, 0, 0) 100%
+  );
+} */
+
+.testimonials_control button {
+  background: none;
+  margin: 0 5px;
+  border: 1px solid var(--text-color);
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.testimonials_control i {
+  transition: all 0.3s ease-in-out;
+}
+
+.testimonials_control button:not(.stop_control):hover {
+  background-color: var(--text-color);
+}
+
+.testimonials_control button:not(.stop_control):hover i {
+  color: white;
+}
+
+.pre_btn.stop_control,
+.next_btn.stop_control {
+  cursor: auto;
+  opacity: 0.5;
+}
+
+label[for="readmore"] {
+  width: 100px;
+  height: 50px;
+  display: block;
+  padding-top: 25px;
+  cursor: pointer;
+  position: relative;
+}
+
+label[for="readmore"]::after {
+  width: 100%;
+  content: attr(data-more);
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+input[id="readmore"]:checked ~ label[for="readmore"]::after {
+  content: attr(data-less);
+}
 
 /* Let's chat */
 .Lets_chat {
-  background: url("../images/noise-texture-200.png");
+  background: url("../images/noise-texture-200.png"),
+    linear-gradient(to right, #f7f3f1, #f7f3f1);
   padding: 80px 0;
 }
 
@@ -266,6 +535,48 @@ body {
   top: 100%;
   left: 0;
   right: 0;
+}
+
+/* Bottom nav */
+
+.bottom_nav {
+  background: url("../images/noise-texture-200.png");
+}
+
+.bottom_nav_item {
+  padding: 30px 0;
+  width: 50%;
+}
+
+.bottom_nav_link {
+  font-family: "Recoleta";
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 60px;
+  color: var(--text-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.bottom_nav_link:hover span {
+  color: var(--text-color-hover);
+}
+
+.bottom_nav_link i {
+  transition: all 0.3s ease-in-out;
+}
+
+.bottom_nav_link:hover .fa-arrow-left-long {
+  transform: translateX(-10px);
+  color: var(--text-color-hover);
+}
+
+.bottom_nav_link:hover .fa-arrow-right-long {
+  transform: translateX(10px);
+  color: var(--text-color-hover);
+}
+
+.bottom_nav_item:nth-child(1) {
+  border-right: 2px solid var(--text-color);
 }
 
 /* Footer */
