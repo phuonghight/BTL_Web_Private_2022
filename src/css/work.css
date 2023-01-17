@@ -1,3 +1,30 @@
+@font-face {
+  font-family: "Basis Grotesque Pro";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/FontsFree-Net-BasisGrotesquePro-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Basis Grotesque Pro";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../font/FontsFree-Net-BasisGrotesquePro-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Basis Grotesque Pro";
+  font-style: normal;
+  font-weight: lighter;
+  src: url("../font/FontsFree-Net-BasisGrotesquePro-Light.ttf");
+}
+
+@font-face {
+  font-family: "Recoleta";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/Recoleta-RegularDEMO.otf");
+}
 *{
     padding: 0px;
     margin: 0px;
@@ -5,13 +32,127 @@
 }
 body{
     width: 100%;
-    height: 100vh;
+}
+main{
+  padding: 0 7%;
 }
 .head{
     width: 100%;
     height: 10%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
+    padding: 0% 45%;
+}
+.head a{
+    text-decoration: none;
+}
+.span_home:hover{
+  text-decoration: underline;
+}
+.topic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+    font-size: 200px;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+    font-family: "Basis Grotesque Pro",sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+}
+.content p{
+  max-width: 450px;
+  text-align: center;
+}
+.banner img{
+  width: 100%;
+  height: 100%;
+}
+.banner{
+  /* position: relative; */
+  z-index: 10;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.mai{
+  position: relative;
+}
+.banner_con{
+  width: 20%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateY(15%)
+}
+.banner_con img{
+  width: 100%;
+  height: 100%;
+}
+.banner img:hover{
+  transform: scale(1.1);
+  transition: 1.0s;
+  cursor: pointer;
+}
+.choose{
+  display: flex;
+  gap: 8px;
+  margin-bottom: 3rem;
+}
+.choose li{
+  list-style-type: none;
+  
+}
+.choose li:not(:last-child):after
+{
+    content: "|";
+    padding: 0 0.5em;
+}
+.choose li a{
+  text-decoration: none;
+  color: black;
+  font-weight: 100;
+}
+.choose li a:hover{
+  color: rgb(168, 168, 1);
+}
+.grid_container {
+  display: grid;
+  grid-template-columns: auto auto;
+  row-gap: 3rem;
+  column-gap: 3rem;
+}
+.card_img{
+  border-radius: 8px;
+  overflow: hidden;
+}
+.card_img img{
+  width: 100%;
+  height: 100%;
+}
+.card_img img:hover{
+  transform: scale(1.1);
+  transition: 1.0s;
+  cursor: pointer;
+}
+.btn_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 6rem 0;
+}
+.btn{
+  width: 4rem;
+}
+.btn img{
+  width: 100%;
+  height: 100%;
 }
