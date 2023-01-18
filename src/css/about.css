@@ -478,7 +478,7 @@ label[for="readmore"]::after {
   transition: all 0.3s ease-in-out;
 }
 
-input[id="readmore"]:checked ~ label[for="readmore"]::after {
+input[name="readmore"]:checked ~ label[for="readmore"]::after {
   content: attr(data-less);
 }
 

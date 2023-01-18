@@ -49,7 +49,9 @@
   }
 
   .testimonials_des {
+    max-height: 130px;
     padding-right: 0;
+    padding-bottom: 50px;
   }
 
   label[for="readmore"] {
