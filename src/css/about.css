@@ -482,6 +482,24 @@ input[name="readmore"]:checked ~ label[for="readmore"]::after {
   content: attr(data-less);
 }
 
+/* Review */
+.review {
+  background: url("../images/noise-texture-200.png");
+}
+
+.review_heading {
+  font-family: "Recoleta";
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 45px;
+  color: var(--text-color);
+  transform: translateY(-50px);
+}
+
+.review_des {
+  padding: 0 200px 50px 200px;
+}
+
 /* Let's chat */
 .Lets_chat {
   background: url("../images/noise-texture-200.png"),

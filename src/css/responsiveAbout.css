@@ -262,6 +262,10 @@
     line-height: 28px;
   }
 
+  .review_des {
+    padding: 0 20px;
+  }
+
   /* Bottom nav */
   .bottom_nav_link {
     font-size: 32px;
