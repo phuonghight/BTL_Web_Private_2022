@@ -32,6 +32,7 @@
   }
 body{
     width: 100%;
+    background: url("../images/noise-texture-200.png");
 }
 main{
     padding: 0 25%;
@@ -74,6 +75,10 @@ span{
     box-shadow: 5px 5px black;
     transition: all .3s ease;
 }
+.inp:focus{
+    box-shadow: 5px 5px black;
+    transition: all .3s ease;
+}
 .inp::-webkit-input-placeholder{
     font-weight: normal;
     color: black;
@@ -86,6 +91,10 @@ span{
     color: black;
 }
 .form_div textarea:hover{
+    box-shadow: 5px 5px black;
+    transition: all .3s ease;
+}
+.form_div textarea:focus{
     box-shadow: 5px 5px black;
     transition: all .3s ease;
 }
@@ -109,6 +118,13 @@ button:hover{
     background-color: #f1c400;
     box-shadow: 7px 7px black;
     transition: all .3s ease;
+}
+.privacy{
+    color: black;
+    display: inline-block;
+}
+.privacy:hover{
+    transform: translateY(-1px);
 }
 @media only screen and (max-width: 768px){
     main{
