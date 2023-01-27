@@ -71,16 +71,16 @@ span{
     padding-left: 1rem;
     color: black;
     transition: all .3s ease; 
+    font-family: "Basis Grotesque Pro";
+    font-weight: bold;
+    font-style: normal;
+    font-size: medium;
 }
 .inp:hover{
     box-shadow: 5px 5px black;
-    /* transition: all .3s ease; */
-    /* transition: all .3s ease-in-out;  */
 }
 .inp:focus{
     box-shadow: 5px 5px black;
-    /* transition: all .3s ease; */
-    /* transition: all .3s ease-in-out; */
 }
 .inp::-webkit-input-placeholder{
     font-weight: normal;
@@ -93,6 +93,10 @@ span{
     padding: 1rem 1rem;
     color: black;
     transition: all .3s ease; 
+    font-family: "Basis Grotesque Pro";
+    font-weight: bold;
+    font-style: normal;
+    font-size: medium;
 }
 .form_div textarea:hover{
     box-shadow: 5px 5px black;
@@ -117,7 +121,11 @@ button{
     box-shadow: 5px 5px black;
     margin: 2rem 0 6rem 0;
     align-self: flex-start;
-    transition: all .3s ease; 
+    transition: all .3s ease;
+    font-family: "Basis Grotesque Pro";
+    font-weight: bold;
+    font-style: normal;
+    font-size: medium; 
 }
 button:hover{
     background-color: #f1c400;
@@ -132,6 +140,11 @@ button:hover{
 }
 .privacy:hover{
     transform: translateY(-1px);
+}
+.agree{
+    font-family: "Basis Grotesque Pro";
+    font-style: normal;
+    font-weight: normal;
 }
 @media only screen and (max-width: 768px){
     main{
