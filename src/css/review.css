@@ -114,7 +114,8 @@ i.fa-solid.fa-star {
 }
 
 .card_review {
-  width: 1000px;
+  /* width: 1000px; */
+  width: 66%;
   border-right: 1px solid var(--second-color);
   border-left: 1px solid var(--second-color);
   border-bottom: 4px solid var(--background-color);

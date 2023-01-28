@@ -67,6 +67,10 @@
     padding: 10px;
   }
 
+  .review_des p {
+    padding-bottom: 50px;
+  }
+
   /* Bottom nav */
   .bottom_nav_item {
     width: 100%;

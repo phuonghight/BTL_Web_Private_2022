@@ -1,0 +1,13 @@
+@media screen and (max-width: 1024px) {
+  .review_content {
+    display: block !important;
+  }
+
+  .mobile_hide {
+    display: none;
+  }
+
+  iframe {
+    height: 1200px;
+  }
+}

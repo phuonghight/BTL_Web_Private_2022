@@ -273,7 +273,7 @@ body {
 /* Why ViiVue */
 
 .text-white {
-  color: white;
+  color: white !important;
 }
 
 .feature_item_img {
