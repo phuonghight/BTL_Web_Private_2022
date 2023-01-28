@@ -194,8 +194,8 @@ window.addEventListener("scroll", () => {
     document.querySelector(".header_banner").getBoundingClientRect().top === 0
   ) {
     $(".nav-desktop.top").css({
-      // background: 'url("../images/noise-texture-200.png")',
-      "background-color": "transparent",
+      background: 'url("../images/noise-texture-200.png")',
+      "background-color": "var(--primary-color)",
     });
   }
 });
