@@ -35,7 +35,7 @@ const headerString = `<!-- header desktop -->
         </a>
 
         <div class="flex-between">
-            <a href="../html/website-quotation.html" class="quotation_link btn btn_mobile text-center">
+            <a style="padding: 5px 10px;" href="../html/website-quotation.html" class="quotation_link btn btn_mobile text-center">
                 Get A Free Consulation
             </a>
             <div class="menu_mobile_btn">
