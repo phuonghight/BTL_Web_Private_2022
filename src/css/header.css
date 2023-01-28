@@ -1,0 +1,380 @@
+@font-face {
+  font-family: "Basis Grotesque Pro";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/FontsFree-Net-BasisGrotesquePro-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Basis Grotesque Pro";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../font/FontsFree-Net-BasisGrotesquePro-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Basis Grotesque Pro";
+  font-style: normal;
+  font-weight: lighter;
+  src: url("../font/FontsFree-Net-BasisGrotesquePro-Light.ttf");
+}
+
+@font-face {
+  font-family: "Recoleta";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/Recoleta-RegularDEMO.otf");
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;
+  background-color: #f5f5f5;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--text-color);
+}
+
+body {
+  counter-reset: count;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+:root {
+  --primary-color: #f4d00a;
+  --btn-hover: #f1c400;
+  --text-color: #141414;
+  --text-color-hover: #de313e;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+video,
+img {
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flex-cl-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.flex {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.flex-cl-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-style {
+  font-family: "Basis Grotesque Pro", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-color);
+}
+
+.btn {
+  font-family: "Basis Grotesque Pro", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--text-color);
+  background-color: white;
+  padding: 8px 25px;
+  border: 2px solid var(--text-color);
+  border-radius: 5px;
+  box-shadow: 5px 5px 0 var(--text-color);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--btn-hover);
+  box-shadow: 7px 7px 0 var(--text-color);
+}
+
+/* Header - Navbar */
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 99;
+}
+
+.nav-desktop.top {
+  /* background: rgb(255 255 255 / 20%);
+      -webkit-backdrop-filter: blur(25px);
+      backdrop-filter: blur(25px); */
+  background: url("../images/noise-texture-200.png");
+  background-color: var(--primary-color);
+  padding: 20px 0;
+}
+
+.header_wraper {
+  padding: 0px 40px;
+}
+
+.logo img {
+  width: 100px;
+}
+
+.menu_list li {
+  margin: 0 30px;
+}
+
+.menu_item_link {
+  font-family: "Basis Grotesque Pro", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  position: relative;
+}
+
+.menu_item_link::before {
+  content: "";
+  width: 100%;
+  height: 1.5px;
+  background-color: var(--text-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.menu_item:hover .menu_item_link::before {
+  opacity: 1;
+}
+
+.cur-page .menu_item_link::before {
+  opacity: 1;
+}
+
+@media screen and (min-width: 1025px) {
+  .header_mobile,
+  .nav_mobile,
+  .show_small_mobile {
+    display: none;
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 768px) {
+  .hidden_small_mobile {
+    display: none;
+  }
+  .show_small_mobile {
+    display: block;
+  }
+
+  .hiden_mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .show_small_mobile {
+    display: none;
+  }
+}
+
+/* Small pc and tablet */
+@media screen and (max-width: 1024px) {
+  .text-style {
+    font-size: 15px;
+    line-height: 23px;
+  }
+
+  .container {
+    max-width: 970px;
+    height: 100%;
+    margin: 0 20px;
+  }
+
+  .btn {
+    max-width: 125px;
+  }
+
+  .flex-reverse {
+    flex-direction: column-reverse;
+  }
+
+  .hiden_mobile {
+    display: none;
+  }
+
+  .width100 {
+    width: 100%;
+  }
+
+  .flex_mobile_wrap {
+    flex-wrap: wrap;
+  }
+
+  /* Header mobile */
+
+  .header_mobile {
+    background: rgb(255 255 255 / 20%);
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+    padding: 10px 0;
+    border-bottom: 1px solid #141414;
+    cursor: pointer;
+  }
+
+  .menu_mobile_btn {
+    height: 35px;
+    width: 35px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .menu_mobile_btn_burger {
+    width: 100%;
+    height: 3px;
+    background-color: #141414;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu_mobile_btn_burger_after {
+    content: "";
+    height: 3px;
+    width: 75%;
+    background-color: #141414;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* animate */
+  .menu_mobile_btn.open .menu_mobile_btn_burger {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  .menu_mobile_btn.open .menu_mobile_btn_burger_after {
+    width: 100%;
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  .btn_mobile {
+    padding: 5px 10px;
+  }
+
+  .nav_mobile {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+    background-color: #f4d00a;
+    right: 100%;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .nav_mobile.show {
+    transform: translate(100%, 0);
+  }
+
+  .menu_mobile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .menu_item {
+    padding: 20px 0;
+  }
+
+  .menu_item_link {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .navbar_social_network {
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .navbar_social_network li {
+    margin: 0 15px;
+  }
+
+  .navbar_social_network li a {
+    color: #141414;
+  }
+}
