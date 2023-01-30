@@ -96,5 +96,5 @@ const footerString = `<div class="container">
 </div>
 </div>`;
 
-document.querySelector("footer.footer").innerHTML = footerString;
+$("footer.footer").html(footerString);
 $("head").append('<link rel="stylesheet" type="text/css" href="../css/footer.css">');

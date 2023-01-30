@@ -9,16 +9,16 @@ const headerString = `<!-- header desktop -->
                 <li class="menu_item">
                     <a href="../../index.html" class="menu_item_link">Home</a>
                 </li>
-                <li class="menu_item">
+                <li class="menu_item" data-curPage="Work">
                     <a href="../html/work.html" class="menu_item_link">Work</a>
                 </li>
-                <li class="menu_item">
+                <li class="menu_item" data-curPage="Expertise">
                     <a href="../html/expertise.html" class="menu_item_link">Expertise</a>
                 </li>
-                <li class="menu_item cur-page">
+                <li class="menu_item" data-curPage="About">
                     <a href="../html/about.html" class="menu_item_link">About</a>
                 </li>
-                <li class="menu_item">
+                <li class="menu_item" data-curPage="Contac">
                     <a href="../html/contact.html" class="menu_item_link">Contact</a>
                 </li>
             </ul>
@@ -52,16 +52,16 @@ const headerString = `<!-- header desktop -->
         <li class="menu_item">
             <a href="../../index.html" class="menu_item_link">Home</a>
         </li>
-        <li class="menu_item">
+        <li class="menu_item" data-curPage="Work">
             <a href="../html/work.html" class="menu_item_link">Work</a>
         </li>
-        <li class="menu_item">
+        <li class="menu_item" data-curPage="Expertise">
             <a href="../html/expertise.html" class="menu_item_link">Expertise</a>
         </li>
-        <li class="menu_item cur-page">
+        <li class="menu_item" data-curPage="About">
             <a href="../html/about.html" class="menu_item_link">About</a>
         </li>
-        <li class="menu_item">
+        <li class="menu_item" data-curPage="Contac">
             <a href="../html/contact.html" class="menu_item_link">Contact</a>
         </li>
     </ul>
@@ -89,6 +89,8 @@ $("header").html(headerString);
 $("head").append(
   '<link rel="stylesheet" type="text/css" href="../css/header.css">'
 );
+console.log($("header").attr("cur-page"));
+$(`.menu_item[data-curPage=${$("header").attr("cur-page")}]`).addClass("cur-page");
 
 // Navbar in mobile
 $(".main_video").click((e) => {
