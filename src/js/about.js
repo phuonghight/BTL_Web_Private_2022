@@ -149,23 +149,3 @@ ScrollTrigger.matchMedia({
     });
   },
 });
-
-// Navbar destop scroll
-window.addEventListener("scroll", () => {
-  if (
-    document.querySelector(".header_banner").getBoundingClientRect().top < 0
-  ) {
-    $(".nav-desktop.top").css({
-      background: "rgb(255 255 255 / 20%)",
-      "backdrop-filter": "blur(25px)",
-      "-webkit-backdrop-filter": "blur(25px)",
-    });
-  } else if (
-    document.querySelector(".header_banner").getBoundingClientRect().top === 0
-  ) {
-    $(".nav-desktop.top").css({
-      background: 'url("../images/noise-texture-200.png")',
-      "background-color": "var(--primary-color)",
-    });
-  }
-});

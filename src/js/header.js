@@ -1,5 +1,5 @@
 const headerString = `<!-- header desktop -->
-<div class="header nav-desktop top hiden_mobile">
+<div class="header nav-desktop hiden_mobile">
     <div class="header_wraper flex-between">
         <a href="../../index.html" class="logo">
             <img src="../images/viivue-logo.svg" alt="">
@@ -89,8 +89,10 @@ $("header").html(headerString);
 $("head").append(
   '<link rel="stylesheet" type="text/css" href="../css/header.css">'
 );
-console.log($("header").attr("cur-page"));
-$(`.menu_item[data-curPage=${$("header").attr("cur-page")}]`).addClass("cur-page");
+$("header").attr("cur-page") &&
+  $(`.menu_item[data-curPage=${$("header").attr("cur-page")}]`).addClass(
+    "cur-page"
+  );
 
 // Navbar in mobile
 $(".main_video").click((e) => {
@@ -127,4 +129,13 @@ ScrollTrigger.matchMedia({
       },
     });
   },
+});
+
+// Navbar destop scroll
+window.addEventListener("scroll", () => {
+  if (document.querySelector("main").getBoundingClientRect().top < 0) {
+    $(".nav-desktop").addClass("top");
+  } else if (document.querySelector("main").getBoundingClientRect().top === 0) {
+    $(".nav-desktop").removeClass("top");
+  }
 });

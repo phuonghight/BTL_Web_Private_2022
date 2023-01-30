@@ -172,13 +172,19 @@ body {
   z-index: 99;
 }
 
-.nav-desktop.top {
+.nav-desktop {
   /* background: rgb(255 255 255 / 20%);
       -webkit-backdrop-filter: blur(25px);
       backdrop-filter: blur(25px); */
-  background: url("../images/noise-texture-200.png");
-  background-color: var(--primary-color);
+  /* background: url("../images/noise-texture-200.png"); */
+  /* background-color: var(--primary-color); */
   padding: 20px 0;
+}
+
+.nav-desktop.top {
+  background: rgb(255 255 255 / 20%);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
 }
 
 .header_wraper {
