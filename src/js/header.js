@@ -86,9 +86,6 @@ const headerString = `<!-- header desktop -->
 </div>`;
 
 $("header").html(headerString);
-$("head").append(
-  '<link rel="stylesheet" type="text/css" href="../css/header.css">'
-);
 $("header").attr("cur-page") &&
   $(`.menu_item[data-curPage=${$("header").attr("cur-page")}]`).addClass(
     "cur-page"
