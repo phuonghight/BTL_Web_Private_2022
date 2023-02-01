@@ -11,3 +11,82 @@
     height: 1200px;
   }
 }
+
+@media screen and (min-width: 1001px) {
+  .small {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .small {
+    display: block;
+  }
+  .large {
+    display: none !important;
+  }
+  .card_review {
+    width: 100%;
+  }
+  .review_details {
+    padding: 0;
+  }
+  .slide_btn {
+    position: relative;
+    padding: 20px 10px;
+  }
+
+  .rv_section {
+    border-left: 1px solid #c9dfe6;
+    border-right: 1px solid #c9dfe6;
+    border-bottom: 1px solid #c9dfe6;
+  }
+
+  .rv_section1 {
+    padding-left: 30px;
+  }
+
+  .rv_section3 {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .rv_reviewer {
+    border: none;
+  }
+
+  .rv_feedback_sum {
+    padding-bottom: 20px;
+  }
+
+  .rv_text {
+    width: 100%;
+    border: none;
+  }
+
+  .rv_rate {
+    width: 100%;
+    padding-left: 30px;
+  }
+
+  .rv_rate_group {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .rv_rate_item {
+    padding-right: 20px;
+  }
+
+  .rv_rate_item:nth-child(even) {
+    padding-left: 20px;
+    border-left: 1px solid #c9dfe6;
+  }
+  .rv_rate_item:nth-child(1) {
+    border-bottom: 1px solid #c9dfe6;
+  }
+  .rv_rate_item:nth-child(2) {
+    border-bottom: 1px solid #c9dfe6;
+  }
+}

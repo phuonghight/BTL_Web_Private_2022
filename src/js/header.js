@@ -92,10 +92,6 @@ $("header").attr("cur-page") &&
   );
 
 // Navbar in mobile
-$(".main_video").click((e) => {
-  updateVideo();
-});
-
 $(".menu_mobile_btn").click(() => {
   $(".menu_mobile_btn").toggleClass("open");
   $(".nav_mobile").toggleClass("show");

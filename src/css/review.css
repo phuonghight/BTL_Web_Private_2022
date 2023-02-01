@@ -108,14 +108,15 @@ a {
   text-align: center;
 }
 
-i.fa-solid.fa-star {
+i.fa-solid.fa-star,
+i.fa-star-half-stroke {
   color: var(--primary-color);
   font-size: 14px;
 }
 
 .card_review {
-  /* width: 1000px; */
-  width: 66%;
+  width: 1000px;
+  /* width: 66%; */
   border-right: 1px solid var(--second-color);
   border-left: 1px solid var(--second-color);
   border-bottom: 4px solid var(--background-color);
@@ -193,6 +194,10 @@ i.fa-solid.fa-star {
 }
 
 .slide_btn i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: var(--primary-color);
 }
 
@@ -205,7 +210,6 @@ i.fa-solid.fa-star {
 }
 
 .review_wrapper {
-  
 }
 
 .review_content {
@@ -328,7 +332,7 @@ i.fa-solid.fa-star {
 }
 
 .rv_rate_item {
-  margin: 10px 0;
+  padding: 10px 0;
 }
 
 .rv_rate_item span {
@@ -376,12 +380,17 @@ i.fa-solid.fa-star {
   color: var(--second-color);
 }
 
+.rv_user.flex-center {
+  justify-content: center;
+}
+
 .rv_user_name {
   font-family: "Lato";
   font-weight: 400;
   font-size: 11px;
   line-height: 16px;
   color: var(--text-color);
+  margin-left: 20px;
 }
 
 .rv_reviewer_info_group {
