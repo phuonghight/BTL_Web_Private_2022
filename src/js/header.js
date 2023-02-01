@@ -89,14 +89,9 @@ $("header").html(headerString);
 $("head").append(
   '<link rel="stylesheet" type="text/css" href="../css/header.css">'
 );
-console.log($("header").attr("cur-page"));
 $(`.menu_item[data-curPage=${$("header").attr("cur-page")}]`).addClass("cur-page");
 
 // Navbar in mobile
-$(".main_video").click((e) => {
-  updateVideo();
-});
-
 $(".menu_mobile_btn").click(() => {
   $(".menu_mobile_btn").toggleClass("open");
   $(".nav_mobile").toggleClass("show");
