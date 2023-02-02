@@ -1,8 +1,55 @@
+@font-face {
+    font-family: "Basis Grotesque Pro";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../font/FontsFree-Net-BasisGrotesquePro-Regular.ttf");
+  }
+  
+  @font-face {
+    font-family: "Basis Grotesque Pro";
+    font-style: normal;
+    font-weight: bold;
+    src: url("../font/FontsFree-Net-BasisGrotesquePro-Bold.ttf");
+  }
+  
+  @font-face {
+    font-family: "Basis Grotesque Pro";
+    font-style: normal;
+    font-weight: lighter;
+    src: url("../font/FontsFree-Net-BasisGrotesquePro-Light.ttf");
+  }
+  
+  @font-face {
+    font-family: "Recoleta";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../font/Recoleta-RegularDEMO.otf");
+  }
+
+  body{
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.3);
+    background-color: #f5f5f5;
+  }
+  
+  body::-webkit-scrollbar {
+    width: 7px;
+    background-color: #f5f5f5;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #141414;
+  }
+  
 .content{
     width: 100%;
     height: 900px;
     display: flex;
     flex-wrap: wrap;
+    margin: 0px;
+    padding: 0px;
 }
 .content_contact{
     width: 40%;
