@@ -50,6 +50,10 @@
     box-sizing: border-box;
 }
 
+img{
+    width: 100%;
+}
+
 .title {
     font-family: "Recoleta";
     font-weight: 500;
@@ -79,11 +83,11 @@
     width: 80%;
     margin: 5% 0% 0% 5%;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .contenta{
-    width: 20%;
+    width: 30%;
     font-family: "Basis Grotesque Pro", sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -96,9 +100,19 @@
     font-size: 16px;
     line-height: 24px;
     color: #141414;
+    display: flex;
+    flex-wrap: wrap;
+    width: 28%;
 }
-.image{
-    width: 15%;
+
+.contenta a:hover{
+    color: rgb(239, 194, 0);
+}
+.image1{
+    display: none;
+}
+.image2{
+    width: 25%;
 }
 
 .a_image{
@@ -112,7 +126,8 @@
     background-color: rgb(254, 254, 254);
 }
 .b_title{
-    margin: 0% 0% 5% 40%;
+    margin-bottom: 35px;
+    text-align: center;
     font-family: "Recoleta";
     font-weight: 400;
     font-size: 64px;
@@ -127,9 +142,9 @@
 
 .contentb{
     width: 20%;
-    padding: 2%;
+    padding: 0% 3% 10% 0%;
     font-family: "Basis Grotesque Pro", sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
     line-height: 24px;
     color: #141414;
@@ -138,14 +153,24 @@
 .contentb:nth-child(4){
     border: 0;
 }
+.content{
+    line-height: 30px;
+}
 
+.stt{
+    position: absolute; 
+    bottom: 0%; 
+    left: 2%; 
+}
 .c{
     width: 100%;
     background-color: rgb(254, 254, 254);
 }
 
 .c_title{
-    margin: 5% 0% 0% 35%;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
     font-family: "Basis Grotesque Pro", sans-serif;
     font-weight: 700;
     font-size: 20px;
@@ -153,17 +178,57 @@
     color: #141414;
 }
 .c_image{
-    display: grid;
-    grid-template-columns:30% 30% 30% 30%;
-    grid-template-rows: 50% 50% 50%;
-    margin: 8%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.img{
+    width: 21%;
 }
 
 @media (max-width: 768px) {
     *{
         max-width: 100vh;
     }
+    .title {
+        font-family: "Recoleta";
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        color: #141414;
+    }
+    .a_content{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .contenta{
+        width: 50%;
+    }
+    .a_title , .b_title{
+        font-family: "Recoleta";
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 39px;
+        color: #141414;
+    }
     
+    .contenta , .contentb{
+        font-family: "Basis Grotesque Pro", sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 23px;
+        color: #141414;
+    }
+    .contentb{
+        width: 20%;
+        padding: 2% 3% 10% 3%;
+    }
+    .image1{
+        display: block;
+    }
+    .image2{
+        display: none;
+    }
     .b_content{
         display: block;
     }
@@ -175,10 +240,20 @@
     .contentb:nth-child(4){
         border: 0;
     }
-    .c_image{
-        display: grid;
-        grid-template-columns:30% 30% 30%;
-        grid-template-rows: 50% 50% 50% 50%;
-        margin: 8%;
+
+    .stt{
+        position: absolute; 
+        top: 90%; 
+        left: 2%; 
+    }
+    .img{
+        width: 33.333%;
+    }
+    .c_title{
+        font-family: "Basis Grotesque Pro", sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 27px;
+        color: #141414;
     }
 }
