@@ -1,0 +1,259 @@
+@font-face {
+    font-family: "Basis Grotesque Pro";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../font/FontsFree-Net-BasisGrotesquePro-Regular.ttf");
+  }
+  
+  @font-face {
+    font-family: "Basis Grotesque Pro";
+    font-style: normal;
+    font-weight: bold;
+    src: url("../font/FontsFree-Net-BasisGrotesquePro-Bold.ttf");
+  }
+  
+  @font-face {
+    font-family: "Basis Grotesque Pro";
+    font-style: normal;
+    font-weight: lighter;
+    src: url("../font/FontsFree-Net-BasisGrotesquePro-Light.ttf");
+  }
+  
+  @font-face {
+    font-family: "Recoleta";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../font/Recoleta-RegularDEMO.otf");
+  }
+
+  body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.3);
+    background-color: #f5f5f5;
+  }
+
+  body{
+    overflow-x: hidden;
+  }
+  
+  body::-webkit-scrollbar {
+    width: 7px;
+    background-color: #f5f5f5;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #141414;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+}
+
+.title {
+    font-family: "Recoleta";
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: #141414;
+}
+
+.a{
+    width: 100%;
+    background-color: rgb(215, 215, 215);
+}
+.a_home{
+    width: 100%;
+    padding: 8% 0% 0% 5%
+}
+.a_title{
+    margin: 5% 0% 0% 5%;
+    padding-right: 40%;
+    font-family: "Recoleta";
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 70px;
+    color: #141414;
+}
+.a_content{
+    width: 80%;
+    margin: 5% 0% 0% 5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenta{
+    width: 30%;
+    font-family: "Basis Grotesque Pro", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #141414;
+}
+.contenta a{
+    font-family: "Basis Grotesque Pro", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #141414;
+    display: flex;
+    flex-wrap: wrap;
+    width: 28%;
+}
+
+.contenta a:hover{
+    color: rgb(239, 194, 0);
+}
+.image1{
+    display: none;
+}
+.image2{
+    width: 25%;
+}
+
+.a_image{
+    width: 100%;
+    height: 200px;
+    background-image: url(../images/expertise-rips.png.webp);
+}
+
+.b{
+    width: 100%;
+    background-color: rgb(254, 254, 254);
+}
+.b_title{
+    margin-bottom: 35px;
+    text-align: center;
+    font-family: "Recoleta";
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 70px;
+    color: #141414;
+}
+.b_content{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contentb{
+    width: 20%;
+    padding: 0% 3% 10% 0%;
+    font-family: "Basis Grotesque Pro", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #141414;
+    border-right: 0.0667px solid rgb(157, 152, 152);
+}
+.contentb:nth-child(4){
+    border: 0;
+}
+.content{
+    line-height: 30px;
+}
+
+.stt{
+    position: absolute; 
+    bottom: 0%; 
+    left: 2%; 
+}
+.c{
+    width: 100%;
+    background-color: rgb(254, 254, 254);
+}
+
+.c_title{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: "Basis Grotesque Pro", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #141414;
+}
+.c_image{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.img{
+    width: 21%;
+}
+
+@media (max-width: 768px) {
+    *{
+        max-width: 100vh;
+    }
+    .title {
+        font-family: "Recoleta";
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        color: #141414;
+    }
+    .a_content{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .contenta{
+        width: 50%;
+    }
+    .a_title , .b_title{
+        font-family: "Recoleta";
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 39px;
+        color: #141414;
+    }
+    
+    .contenta , .contentb{
+        font-family: "Basis Grotesque Pro", sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 23px;
+        color: #141414;
+    }
+    .contentb{
+        width: 20%;
+        padding: 2% 3% 10% 3%;
+    }
+    .image1{
+        display: block;
+    }
+    .image2{
+        display: none;
+    }
+    .b_content{
+        display: block;
+    }
+    .contentb{
+        width: 100%;
+        border-right: 0;
+        border-bottom: 0.0667px solid gray;
+    }
+    .contentb:nth-child(4){
+        border: 0;
+    }
+
+    .stt{
+        position: absolute; 
+        top: 90%; 
+        left: 2%; 
+    }
+    .img{
+        width: 33.333%;
+    }
+    .c_title{
+        font-family: "Basis Grotesque Pro", sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 27px;
+        color: #141414;
+    }
+}
