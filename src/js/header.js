@@ -18,7 +18,7 @@ const headerString = `<!-- header desktop -->
                 <li class="menu_item" data-curPage="About">
                     <a href="../html/about.html" class="menu_item_link">About</a>
                 </li>
-                <li class="menu_item" data-curPage="Contac">
+                <li class="menu_item" data-curPage="Contact">
                     <a href="../html/contact.html" class="menu_item_link">Contact</a>
                 </li>
             </ul>
@@ -61,7 +61,7 @@ const headerString = `<!-- header desktop -->
         <li class="menu_item" data-curPage="About">
             <a href="../html/about.html" class="menu_item_link">About</a>
         </li>
-        <li class="menu_item" data-curPage="Contac">
+        <li class="menu_item" data-curPage="Contact">
             <a href="../html/contact.html" class="menu_item_link">Contact</a>
         </li>
     </ul>
