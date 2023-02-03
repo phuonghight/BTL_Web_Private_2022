@@ -26,13 +26,13 @@
     src: url("../font/Recoleta-RegularDEMO.otf");
   }
 
-  body{
-    overflow-x: hidden;
-    
-}
-body::-webkit-scrollbar-track {
+  body::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.3);
     background-color: #f5f5f5;
+  }
+
+  body{
+    overflow-x: hidden;
   }
   
   body::-webkit-scrollbar {
@@ -44,99 +44,99 @@ body::-webkit-scrollbar-track {
     background-color: #141414;
   }
 
-  *{
+*{
+    width: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
 
-.content{
-    width: 100%;
-    height: 100vh;
+.page{
     display: flex;
     flex-wrap: wrap;
 }
-.content_contact{
+
+img{
+    width: 100%;
+}
+
+.a{
     width: 40%;
-    height: 900px;
     background-color: rgb(239, 194, 0);
-    padding: 4%;
+    padding-bottom: 5%;
 }
-.content_contact_1{
-    padding: 5%;
+
+.a_home{
+    display: flex;
+    text-align: center;
+    width: 30%;
+    padding: 20% 0% 0% 7%
 }
-.content_contact_1 a{
-    font-family: "Basis Grotesque Pro", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #141414;
-}
-.content_contact_1_title{
+
+.a_title{
     font-family: "Recoleta";
     font-weight: 400;
     font-size: 50px;
     line-height: 60px;
     color: #141414;
-}
-.content_contact_2 {
-    margin: 8%; 
-    font-family: "Basis Grotesque Pro", sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 26px;
-    color: #141414;
+    margin-left: 5%;
 }
 
 .input , textarea{
-    width: 350px;
+    width: 60%;
     height: 45px;
-    margin-top: 30px;
+    margin: 5% 0 0 5%;
     border-radius: 5px;
     border: 1.5px solid black;
     font-size: 15px;
+    max-width: 60%;
+    min-width: 59.99%;
+    padding-left: 5%;
+    padding-top: 1%;
 }
 
-.textarea{
-    max-width: 350px;
-    min-width: 349px;
+
+.input:hover ,textarea:hover{
+    box-shadow: 5px 5px 0px 0px;
 }
 
 button{
     box-shadow: 5px 5px 0px 0px;
 }
+
 button:hover{
     background-color: rgb(239, 194, 0);
     box-shadow: 9px 9px 0px 0px black;
 }
-.input:hover , textarea:hover{
-    box-shadow: 5px 5px 0px 0px;
+
+.a_content p , button{
+    margin: 5% 0 0 5%;
 }
 
-.content_information{
+
+.b{
     width: 60%;
-    height: 900px;
-    background-color: #e1e1e1;
-    display: inline;
+    padding-left: 8%;
 }
-.content_informatio_1{
+.b_title{
     font-size: 50px;
-    margin: 7% 0 0 10%;
+    margin: 15% 0 0 0;
     font-family: "Recoleta";
     font-weight: 400;
     font-size: 40px;
     line-height: 45px;
     color: #141414;
 }
-.content_informatio_2{
-    display: flex;
-    justify-content: space-around;
-    margin: 7% 0 0 20%;
+
+.title{
+    font-family: "Basis Grotesque Pro", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 50px;
+    color: rgb(241, 58, 68);
 }
 
-.content_informatio_2_text{
-    width: 60%;
-    justify-content: space-between;
+.content{
     font-family: "Basis Grotesque Pro", sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -144,48 +144,45 @@ button:hover{
     color: #141414;
 }
 
-.content_informatio_2_text_title{
-    font-family: "Basis Grotesque Pro", sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 30px;
-    color: rgb(241, 58, 68);
-}
-.content_informatio_2_text_icon{
-    display: flex;
-    justify-content: space-around;
-}
-.content_informatio_2_text_icon_1{
-    width: 35px;
-    height: 35px; 
-    border-radius: 50%;
-    border: 1.5px solid gray;
-    margin-left: 5%;
-}
-
-.content_informatio_2_text_icon_1 i{
-    margin: 25%;
-}
-
-.content_informatio_2_text_icon_1:hover{
-    background-color: rgb(239, 194, 0);
-}
-
-.phone_email:hover{
+.contentb:hover{
     color: rgb(239, 194, 0);
 }
 
-.content_informatio_2_img{
-    width: 40%;
-    margin: 35%;
+.content_icon{
+    width: 30%;
+    display: flex;
+    
+}
+.icon{
+    margin-right: 5%;
+    width: 20%;
+    height: 40px;
+    padding-left: 5%;
+    padding-top: 5%;
+    border-radius: 50%;
+    border: 1.5px solid gray;
 }
 
-@media (max-width: 768px){
-    .input{
-        width: 90%;
+.icon:hover{
+    background-color: rgb(239, 194, 0);
+}
+
+.b_img{
+    width: 15%;
+    position: absolute;
+    left: 60%;
+    top: 70%;
+}
+
+@media (max-width: 768px) {
+    .page{
+        display: flex;
+        flex-wrap: wrap;
     }
-    .textarea{
-        max-width: 185px;
-        min-width: 184px;
+    .a{
+        width: 100%;
+    }
+    .b{
+        width: 100%;
     }
 }
