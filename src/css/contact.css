@@ -88,13 +88,18 @@ body::-webkit-scrollbar-track {
     color: #141414;
 }
 
-.input{
+.input , textarea{
     width: 350px;
     height: 45px;
     margin-top: 30px;
     border-radius: 5px;
-    border: 3px bold black;
+    border: 1.5px solid black;
     font-size: 15px;
+}
+
+.textarea{
+    max-width: 350px;
+    min-width: 349px;
 }
 
 button{
@@ -104,7 +109,7 @@ button:hover{
     background-color: rgb(239, 194, 0);
     box-shadow: 9px 9px 0px 0px black;
 }
-.input:hover{
+.input:hover , textarea:hover{
     box-shadow: 5px 5px 0px 0px;
 }
 
@@ -146,7 +151,6 @@ button:hover{
     line-height: 30px;
     color: rgb(241, 58, 68);
 }
-
 .content_informatio_2_text_icon{
     display: flex;
     justify-content: space-around;
@@ -174,4 +178,14 @@ button:hover{
 .content_informatio_2_img{
     width: 40%;
     margin: 35%;
+}
+
+@media (max-width: 768px){
+    .input{
+        width: 90%;
+    }
+    .textarea{
+        max-width: 185px;
+        min-width: 184px;
+    }
 }

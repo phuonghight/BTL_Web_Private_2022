@@ -160,18 +160,10 @@
 }
 
 @media (max-width: 768px) {
-    .image{
-        order: 1;
+    *{
+        max-width: 100vh;
     }
-    .a_home{
-        order: 2;
-    }
-    .a_title{
-        order: 3;
-    }
-    .a_content{
-        order: 4;
-    }
+    
     .b_content{
         display: block;
     }
