@@ -1,85 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Design and Web Development | ViiVue</title>
     <link rel="stylesheet" href="../css/expertise.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.45/vue.cjs.js" integrity="sha512-7m9S6PzUY75+/V5GIWRP19NFD1MgYpzbmbbSfUMnj8PMtkOj/XZs4BmxXvXku2litdO4qDrVhGtFkk2MVWlpcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="../css/header.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 </head>
+
 <body>
-    <div class="page">
+    <header cur-page="Expertise"></header>
+    <script src="../js/header.js"></script>
+
+    <main class="page">
         <div class="a">
-            <div class="image1"><img src="../images/expertise.svg" ></div>
+            <div class="image1"><img src="../images/expertise.svg"></div>
             <div class="a_home">
                 <a href="#" style="text-decoration: none; color: #141414;">Home</a>
                 <i class="fa-solid fa-chevron-right" style="margin-top: 5px;"></i>
                 <a href="#" style="color: #141414;">Expertise</a>
             </div>
-            <div class="a_title"><h>We offer a full range of web design and development services.</h></div>
+            <div class="a_title">
+                <h>We offer a full range of web design and development services.</h>
+            </div>
             <div class="a_content" style="position: relative;">
                 <div class="contenta">
                     <h class="title">Strategy.<br></h>
-                    <h >Analytics and Research<br>
-                    Content Strategy<br>
-                    Digital Strategy</h>
+                    <h>Analytics and Research<br>
+                        Content Strategy<br>
+                        Digital Strategy</h>
                 </div>
                 <div class="contenta">
                     <h class="title"> Design.<br></h>
-                        <a href="http://">UI/UX & Web Design<br></a>
-                        <h >E-commerce Design<br></h>
-                        <h >App Design<br></h>
-                        <h >ogo Design<br></h>
-                        <h >CI Design<br></h>
-                        <h >Brand Guides<br></h>
-                        <h >Brochure Design<br></h>
+                    <a href="http://">UI/UX & Web Design<br></a>
+                    <h>E-commerce Design<br></h>
+                    <h>App Design<br></h>
+                    <h>ogo Design<br></h>
+                    <h>CI Design<br></h>
+                    <h>Brand Guides<br></h>
+                    <h>Brochure Design<br></h>
                 </div>
                 <div class="contenta">
                     <h class="title">Development.<br></h>
                     <a href="http://">Custom Web Development<br></a>
-                    <h >E-commerce Development<br></h>
+                    <h>E-commerce Development<br></h>
                     <a href="http://">WordPress Template<br></a>
-                    <h >Shopify Development<br></h>
+                    <h>Shopify Development<br></h>
                     <a href="http://">Website Maintenance</a>
                 </div>
-                <div class="image2" style="position: absolute; left: 85%; bottom: 3%;"><img src="../images/expertise.svg" ></div>
+                <div class="image2" style="position: absolute; left: 85%; bottom: 3%;"><img
+                        src="../images/expertise.svg"></div>
             </div>
             <div class="a_image"></div>
         </div>
-        
+
 
         <div class="b">
-            <div class="b_title"><h>Our process</h></div>
+            <div class="b_title">
+                <h>Our process</h>
+            </div>
             <div class="b_content">
                 <div class="contentb" style="position: relative;">
                     <p class="title">Discovery<br></p>
-                    <h class="content">We start by identifying your business and project goals, understanding your market and competitors, defining user needs through analytics and research. This provides us with the necessary insight to design the sitemap and information architecture of the website.</h>
+                    <h class="content">We start by identifying your business and project goals, understanding your
+                        market and competitors, defining user needs through analytics and research. This provides us
+                        with the necessary insight to design the sitemap and information architecture of the website.
+                    </h>
                     <div class="stt" style="position: absolute; bottom: 0%; left: 2%; color: gray;">01</div>
                 </div>
-                <div class="contentb"  style="position: relative;">
+                <div class="contentb" style="position: relative;">
                     <p class="title">Design<br></p>
-                    <h class="content">We turn the findings from our discovery and strategy sessions into creating a user experience that is right for your target audience. After defining the content structure of the website, we create wireframes to help visualize what the pages will look like. We complete the design stage by adding visual elements, turning those layouts into beautiful and functional interface.</h>
+                    <h class="content">We turn the findings from our discovery and strategy sessions into creating a
+                        user experience that is right for your target audience. After defining the content structure of
+                        the website, we create wireframes to help visualize what the pages will look like. We complete
+                        the design stage by adding visual elements, turning those layouts into beautiful and functional
+                        interface.</h>
                     <div class="stt" style="position: absolute; bottom: 0%; left: 2%; color: gray;">02</div>
                 </div>
-                <div class="contentb"  style="position: relative;">
+                <div class="contentb" style="position: relative;">
                     <p class="title">Build<br></p>
-                    <h class="content">From a simple website to enterprise-level WordPress projects, our team of full-stack web developers can handle it all. Our responsive websites are bespoke-built using the latest technology to ensure that they are lean and best tailored to your needs. They are also packed with reusable components that would allow you to freely customize your layouts with any combination of assets. We also build e-commerce sites using Woocommerce and Shopify.</h>
+                    <h class="content">From a simple website to enterprise-level WordPress projects, our team of
+                        full-stack web developers can handle it all. Our responsive websites are bespoke-built using the
+                        latest technology to ensure that they are lean and best tailored to your needs. They are also
+                        packed with reusable components that would allow you to freely customize your layouts with any
+                        combination of assets. We also build e-commerce sites using Woocommerce and Shopify.</h>
                     <div class="stt" style="position: absolute; bottom: 0%; left: 2%; color: gray;">03</div>
                 </div>
-                <div class="contentb"  style="position: relative;">
+                <div class="contentb" style="position: relative;">
                     <p class="title">Handover<br></p>
-                    <h class="content">After launching and testing the website for loading speed, we also set up security, backup, SEO tools to ensure that your website is best optimized for organic growth. We also offer helpful how-to videos, documentation and support links to help you take over and manage the website on your own.</h>
+                    <h class="content">After launching and testing the website for loading speed, we also set up
+                        security, backup, SEO tools to ensure that your website is best optimized for organic growth. We
+                        also offer helpful how-to videos, documentation and support links to help you take over and
+                        manage the website on your own.</h>
                     <div class="stt" style="color: gray;">04</div>
                 </div>
             </div>
         </div>
 
         <div class="c">
-            <div class="c_title"><p>SOME OF OUR VALUED CLIENTS</p></div>
+            <div class="c_title">
+                <p>SOME OF OUR VALUED CLIENTS</p>
+            </div>
             <div class="c_image">
                 <div class="img"><img src="../images/brand-rmit.webp"></div>
                 <div class="img"><img src="../images/brand-bottle-shop.webp"></div>
@@ -95,6 +131,148 @@
                 <div class="img"><img src="../images/brand-mia.webp"></div>
             </div>
         </div>
-    </div>
+
+        <!-- Testimonials -->
+        <div class="testimonials flex-center">
+            <div class="testimonials_wraper container">
+                <div class="testimonials_des_wraper">
+                    <p class="cur_testimonials_des testimonials_des">
+                        “ViiVue initially impressed us with their creative proposal for our website, it really
+                        showcased they understood our brand which was very important to us. Throughout the whole
+                        process, we worked very closely together so that ideas were shared and the ViiVue team made
+                        themselves always available to us for any questions. Moreover, they made us feel confident
+                        in their ability to deliver and their constant support put us at ease. In the end, I can
+                        truly say that Viivue went above and beyond to create a beautiful website that we are very
+                        happy with.”
+                    </p>
+                    <p class="testimonials_des">
+                        “We were impressed with their availability and capacity to understand the project and handle it
+                        as a
+                        whole with a results-driven mindset. The website is nice, functional, at the image we wanted.
+                        More
+                        importantly, it has already shown the success by receiving an average of 1 inquiry per day
+                        through
+                        the website. The previous one was bringing 2 a year top.”
+                    </p>
+                    <p class="testimonials_des">
+                        “Viivue manages to be available and helpful, they didn’t hesitate to go out of their consulting
+                        scope to ensure all parties share the same understanding. To this day, our website remains
+                        highly
+                        relevant to the work we do and to the brand clients we talk to – Viivue managed to design and
+                        structure a web experience in line with our expectations, and sturdy enough to require very few
+                        maintenance and troubleshooting.”
+                    </p>
+                    <p class="testimonials_des">
+                        “I would like to say that it has been a real pleasure working with you and your team on this
+                        project. I had some very precise expectations (perhaps too precise) but I have always felt that
+                        they
+                        were always given serious consideration and you were not trying to sell me your idea of what my
+                        website should be. At the same time you gave me a lot of very valuable suggestions and advice on
+                        how
+                        to make a website that worked as I wanted it to. In short, it was a real collaboration, and
+                        that’s
+                        exactly how it should be.”
+                    </p>
+                    <input type="checkbox" name="readmore" id="readmore" hidden>
+                    <label class="text-style" for="readmore" data-more="Show more +" data-less="Show less -"></label>
+                </div>
+
+                <div class="testimonials_user">
+                    <div class="testimonials_user_wraper text-style cur_user">
+                        <div class="testimonials_name">
+                            Louise Doan Viet
+                        </div>
+                        <div class="testimonials_position">
+                            Business Development & Marketing Manager - CATHERINE DENOUAL MAISON
+                        </div>
+                    </div>
+                    <div class="testimonials_user_wraper text-style">
+                        <div class="testimonials_name">
+                            Zacharie Blondeau
+                        </div>
+                        <div class="testimonials_position">
+                            Operations Director | Partner at SOURCE OF ASIA
+                        </div>
+                    </div>
+                    <div class="testimonials_user_wraper text-style">
+                        <div class="testimonials_name">
+                            Raphael Lachkar
+                        </div>
+                        <div class="testimonials_position">
+                            Chief Operating Officer - VERO ASEAN
+                        </div>
+                    </div>
+                    <div class="testimonials_user_wraper text-style">
+                        <div class="testimonials_name">
+                            Patrick Coustance
+                        </div>
+                        <div class="testimonials_position">
+                            Director at KORU EDUCATION
+                        </div>
+                    </div>
+
+                    <div class="testimonials_control flex">
+                        <button type="button" class="pre_btn flex-cl-center stop_control">
+                            <i class="fa-solid fa-arrow-left-long"></i>
+                        </button>
+                        <button type="button" class="next_btn flex-cl-center">
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/testimonialsSlide.js"></script>
+
+        <!-- Lets chat -->
+        <div class="Lets_chat">
+            <div class="container">
+                <div class="flex-between">
+                    <div class="rigth flex">
+                        <div class="mailbox">
+                            <img src="../images/Mailbox.svg" alt="">
+                        </div>
+                        <div class="lets_chat_des">
+                            Can’t wait to talk about your next project?
+                            <br>
+                            It will only take a few minutes to fill out this
+                            <br>
+                            form before we can schedule a call.
+                        </div>
+                    </div>
+                    <div class="left flex-cl-center">
+                        <div class="lets_chat_btn">
+                            <a href="../html/website-quotation.html" class="lets_chat_link">
+                                <span>Let's Chat</span>
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom nav -->
+        <div class="bottom_nav">
+            <ul class="bottom_nav_list flex-center">
+                <li class="bottom_nav_item flex-cl-center">
+                    <a href="../html/work.html" class="bottom_nav_link">
+                        <i class="fa-solid fa-arrow-left-long"></i>
+                        <span>Our Work</span>
+                    </a>
+                </li>
+                <li class="bottom_nav_item flex-cl-center">
+                    <a href="../html/about.html" class="bottom_nav_link">
+                        <span>About us</span>
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="footer"></footer>
+    <script src="../js/footer.js"></script>
 </body>
+
 </html>
