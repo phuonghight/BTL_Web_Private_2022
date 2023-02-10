@@ -358,17 +358,12 @@ $(".main_video")
   });
 
 let videoIsTrue = false;
-
 function updateMouse() {
-  let html;
-  if (videoIsTrue) {
-    html = `<div class="shape flex-cl-center"><i class="fa-solid fa-eye"></i></div>
-    <div class="title">PLAY VIDEO</div>`;
-  } else {
-    html = `<div class="shape flex-cl-center"><i class="fa-solid fa-square"></i></div>
+  const html = videoIsTrue
+    ? `<div class="shape flex-cl-center"><i class="fa-solid fa-eye"></i></div>
+    <div class="title">PLAY VIDEO</div>`
+    : `<div class="shape flex-cl-center"><i class="fa-solid fa-square"></i></div>
     <div class="title">CLOSE VIDEO</div>`;
-  }
-
   $(".mouse").html(html);
 }
 
@@ -393,10 +388,7 @@ function updateVideo() {
   $(".main_video").children()[0].replaceWith(vid);
 }
 
-// Navbar in mobile
-$(".main_video").click((e) => {
-  updateVideo();
-});
+$(".main_video").click(updateVideo);
 
 $(".menu_mobile_btn").click(() => {
   $(".menu_mobile_btn").toggleClass("open");
