@@ -41,7 +41,7 @@ function updateTestimonals(index) {
   });
 }
 
-function updateChecbox(index) {
+function updateCheckbox(index) {
   showMore.forEach((item, i) => {
     if (i == index - 1 && item) {
       $("#readmore").prop("checked", true);
@@ -51,18 +51,20 @@ function updateChecbox(index) {
   });
 }
 
+function updateUI(index) {
+  updateTestimonals(index);
+  stopControl(index);
+  updateCheckbox(index);
+}
+
 $(".pre_btn").click((e) => {
   if (curIndex == 1) return;
   curIndex--;
-  updateTestimonals(curIndex);
-  stopControl(curIndex);
-  updateChecbox(curIndex);
+  updateUI(curIndex);
 });
 
 $(".next_btn").click((e) => {
   if (curIndex == 4) return;
   curIndex++;
-  updateTestimonals(curIndex);
-  stopControl(curIndex);
-  updateChecbox(curIndex);
+  updateUI(curIndex);
 });
