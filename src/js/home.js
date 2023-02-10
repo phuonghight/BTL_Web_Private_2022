@@ -310,17 +310,19 @@ ScrollTrigger.matchMedia({
     });
 
     // What we do
-    gsap.from(".expertise_item", {
-      opacity: 0,
-      y: "20%",
-      duration: 0.5,
-      scrollTrigger: {
-        trigger: ".expertise_item",
-        start: "top 75%",
-        end: "top 75%",
-        // markers: true,
-      },
-    });
+    for (let i = 0; i < 4; i++) {
+      gsap.from(`.expertise_item:nth-child(${i + 1})`, {
+        opacity: 0,
+        y: "50%",
+        duration: 0.7,
+        scrollTrigger: {
+          trigger: `.expertise_item:nth-child(${i + 1})`,
+          start: "top 80%",
+          end: "top 80%",
+          // markers: true,
+        },
+      });
+    }
 
     // Brand
     gsap
@@ -390,7 +392,6 @@ function updateVideo() {
   videoIsTrue = !videoIsTrue;
   $(".main_video").children()[0].replaceWith(vid);
 }
-
 
 // Navbar in mobile
 $(".main_video").click((e) => {
