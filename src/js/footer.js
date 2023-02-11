@@ -62,17 +62,17 @@ const footerString = `<div class="container">
 
             <ul class="footer_social_network">
                 <li class="social_network_item">
-                    <a href="#" class="flex-cl-center">
+                    <a target="_blank" href="https://www.facebook.com/viivue" class="flex-cl-center">
                         <i class="fa-brands fa-facebook-f"></i>
                     </a>
                 </li>
                 <li class="social_network_item">
-                    <a href="#" class="flex-cl-center">
+                    <a target="_blank" href="https://dribbble.com/viivue" class="flex-cl-center">
                         <i class="fa-brands fa-dribbble"></i>
                     </a>
                 </li>
                 <li class="social_network_item">
-                    <a href="#" class="flex-cl-center">
+                    <a target="_blank" href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fviivue-web-design-company%2Fabout%2F" class="flex-cl-center">
                         <i class="fa-brands fa-linkedin-in"></i>
                     </a>
                 </li>
@@ -97,4 +97,6 @@ const footerString = `<div class="container">
 </div>`;
 
 $("footer.footer").html(footerString);
-$("head").append('<link rel="stylesheet" type="text/css" href="../css/footer.css">');
+$("head").append(
+  '<link rel="stylesheet" type="text/css" href="../css/footer.css">'
+);
